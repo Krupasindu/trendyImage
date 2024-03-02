@@ -1,4 +1,3 @@
-import { Email } from "@clerk/nextjs/server";
 import { Schema, model, models } from "mongoose";
 
 export interface IUser {
@@ -14,7 +13,7 @@ export interface IUser {
 
 const UserSchema = new Schema({
   clerkID: { type: String, required: true, unique: true },
-  email: { type: Email, required: true, unique: true },
+  email: { type: String, required: true, unique: true },
   username: { type: String, required: true, unique: true },
   photo: { type: String, required: true },
   firstName: { type: String },
